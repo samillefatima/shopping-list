@@ -23,7 +23,6 @@ export class ItemListComponent {
   }
 
   startEdit(index: number): void {
-    // Inicia a edição do item
     this.editedItemIndex = index;
     this.editedItem = this.items[index].name; 
   }

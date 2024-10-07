@@ -55,7 +55,7 @@
 }
 
 .item-list li.purchased {
-  text-decoration: line-through; /* Riscar texto dos itens comprados */
+  text-decoration: line-through;
   color: gray;
 }
 
@@ -71,7 +71,7 @@
 }
 
   input[type="text"] {
-    border: 2px solid #ff7f50; /* Mudando a cor da borda para laranja */
+    border: 2px solid #ff7f50; 
   }
   
 /* Responsividade */
