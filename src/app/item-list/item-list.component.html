@@ -1,0 +1,61 @@
+<div class="container">
+    
+    <div class="input-container">
+        <input 
+          type="text" 
+          [(ngModel)]="newItem" 
+          placeholder="Adicionar novo item..." 
+          (keyup.enter)="addItem()" 
+          required 
+        />
+        <button (click)="addItem()" [disabled]="!newItem.trim()">Adicionar</button> <!-- Botão desabilitado se o campo estiver vazio -->
+      </div>
+
+    <h3>Não Comprados</h3>
+    <ul class="item-list">
+      <ng-container *ngFor="let item of items; let i = index">
+        <li *ngIf="!item.purchased" [class.purchased]="item.purchased">
+          <input 
+            type="checkbox" 
+            [(ngModel)]="item.purchased" 
+            (change)="moveToPurchased(i)"
+          />
+          <span *ngIf="editedItemIndex !== i" (click)="togglePurchased(i)">{{ item.name }}</span>
+          <input 
+            *ngIf="editedItemIndex === i"
+            type="text" 
+            [(ngModel)]="editedItem" 
+            (keyup.enter)="editItem(i)"
+            (blur)="editItem(i)"
+          />
+          <button (click)="startEdit(i)" *ngIf="editedItemIndex !== i"><i class="fas fa-edit"></i></button>
+          <button (click)="deleteItem(i)"><i class="fas fa-trash"></i></button>
+        </li>
+      </ng-container>
+    </ul>
+  
+    
+    <h3>Comprados</h3>
+    <ul class="item-list">
+      <ng-container *ngFor="let item of items; let i = index">
+        <li *ngIf="item.purchased" [class.purchased]="item.purchased">
+          <input 
+            type="checkbox" 
+            [(ngModel)]="item.purchased" 
+            (change)="moveToPurchased(i)"
+            checked
+          />
+          <span *ngIf="editedItemIndex !== i" (click)="togglePurchased(i)">{{ item.name }}</span>
+          <input 
+            *ngIf="editedItemIndex === i"
+            type="text" 
+            [(ngModel)]="editedItem" 
+            (keyup.enter)="editItem(i)"
+            (blur)="editItem(i)"
+          />
+          <button (click)="startEdit(i)" *ngIf="editedItemIndex !== i"><i class="fas fa-edit"></i></button>
+          <button (click)="deleteItem(i)"><i class="fas fa-trash"></i></button>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
