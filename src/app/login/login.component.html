@@ -1,6 +1,4 @@
-
-<div class="app-container">
-  <header>
+<header>
     <div class="login">
       <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
         <span>Bem-vindo(a), {{ (auth.user$ | async)?.name }}</span>
@@ -11,8 +9,3 @@
       </ng-template>
     </div>
   </header>
-
-  <router-outlet></router-outlet>
-  <h1>Lista de Compras de Supermercado</h1>
-  <app-item-list></app-item-list>
-</div>

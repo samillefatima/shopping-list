@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .app-container {
     max-width: 600px;
     margin: 20px auto;
@@ -16,3 +17,44 @@ body{
     text-align: center;
     color: #FF6600; 
   }
+
+  /* Estilos para o componente de login/logout */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-self: center;
+  padding: 20px;
+}
+
+button {
+  background-color: #FF6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e65c00; 
+}
+
+span {
+  color: #d86010;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+ng-template {
+  display: inline-block;
+}

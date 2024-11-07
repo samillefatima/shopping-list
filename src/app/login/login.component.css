@@ -1,0 +1,43 @@
+header .login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+  }
+  
+  header h1 {
+    color: #d86010;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  header span {
+    color: #d86010;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  button {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); 
+  }
+  
+  button:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px); 
+  }
+  
+  button:active {
+    background-color: #cc5200;
+    transform: translateY(1px); 
+  }
+  
